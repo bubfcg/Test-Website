@@ -1,27 +1,17 @@
 baseURL = 'https://bubfcg.github.io/Test-Website/'
 languageCode = 'nl-nl'
-title = 'Mijn Hugo Website'
-theme = ''
+title = 'C.A. Holland Conventie 2026'
 
 [params]
-  description = 'Een moderne website gebouwd met Hugo'
-  author = 'Jouw Naam'
+  # Hoofdkleuren uit stijlgids
+  color_blue = "#5EBBEC"
+  color_yellow = "#FEEB15"
+  color_orange = "#ED6D1A"
+  
+  # Sectie kleuren (tinten uit stijlgids)
+  color_olive_bg = "#8A9127"
+  color_dark_olive_bg = "#5A5E1A"
+  color_dark_blue_bg = "#0A3D5B"
+  
+  countdown_target = "2026-08-14T09:00:00"
 
-[menu]
-  [[menu.main]]
-    name = 'Home'
-    url = '/'
-    weight = 1
-  [[menu.main]]
-    name = 'Blog'
-    url = '/posts/'
-    weight = 2
-  [[menu.main]]
-    name = 'Over'
-    url = '/about/'
-    weight = 3
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
