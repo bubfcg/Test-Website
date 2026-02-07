@@ -1,244 +1,26 @@
 {{ define "main" }}
+  <header style="background: url('/images/header-main.png') no-repeat center bottom; background-size: cover; min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 50px;">
+      <div id="countdown" style="display: flex; gap: 20px; color: var(--ca-orange); font-family: 'ADayWithoutSun', sans-serif; font-size: 2rem;">
+          </div>
+  </header>
 
-<!-- Hero Section met Sunburst -->
-<section class="hero">
-    <!-- Sunburst achtergrond -->
-    <div class="sunburst">
-        <div class="ray"></div>
-        <div class="ray"></div>
-        <div class="ray"></div>
-        <div class="ray"></div>
-        <div class="ray"></div>
-        <div class="ray"></div>
-        <div class="ray"></div>
-        <div class="ray"></div>
-        <div class="ray"></div>
-        <div class="ray"></div>
-        <div class="ray"></div>
-        <div class="ray"></div>
-    </div>
-    
-    <div class="hero-content">
-        <!-- C.A. Badge -->
-        <div class="ca-badge">
-            <div class="ca-badge-inner">
-                <span class="top-text">HOOPT VERTROUWEN</span>
-                <span class="ca">CA</span>
-                <span class="bottom-text">MOED</span>
-            </div>
-        </div>
-        
-        <!-- Countdown Timer -->
-        <div class="countdown">
-            <div class="countdown-item">
-                <span class="countdown-number" id="days">21</span>
-                <span class="countdown-label">DAGEN</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="hours">12</span>
-                <span class="countdown-label">UREN</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="minutes">38</span>
-                <span class="countdown-label">MIN.</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number" id="seconds">09</span>
-                <span class="countdown-label">SEC</span>
-            </div>
-        </div>
-        
-        <!-- Event Info -->
-        <p class="event-subtitle">AREA C.A. HOLLAND CONVENTIE 2026</p>
-        <h1 class="event-title">WE LIVE FREE</h1>
-        <p class="event-date">14, 15 & 16 AUGUSTUS, NOORDWIJKERHOUT</p>
-        
-        <p class="event-description">
-            Het is zo ver. De kaart verkoop van het grootste Nederlandse C.A. event is gestart! 
-            Wij verwelkomen iedereen om deze zomer samen onze nieuwe vrijheid in het leven 
-            te vieren en hun ervaring, kracht en hoop te delen over hoe we tot dit punt gekomen zijn. 
-            Het wordt een groot succes, dus wees er snel bij!
-        </p>
-        
-        <!-- CTA Buttons -->
-        <div class="cta-buttons">
-            <a href="#registreren" class="btn btn-primary">Registreren</a>
-            <a href="#prijzen" class="btn btn-secondary">Prijzen Lijst</a>
-            <a href="#info" class="btn btn-tertiary">Meer Info</a>
-        </div>
-    </div>
-</section>
+  <section style="background-color: var(--ca-yellow); padding: 60px 20px; text-align: center;">
+      <h2 style="color: var(--ca-blue);">AREA C.A. HOLLAND CONVENTIE 2026</h2>
+      <h1 style="font-size: 4rem; color: white; margin: 0;">WE LIVE FREE</h1>
+      <p>14, 15 & 16 AUGUSTUS, NOORDWIJKERHOUT</p>
+      
+      <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px;">
+          <a href="#register" style="background: var(--ca-orange); color: white; padding: 15px 30px; text-decoration: none;">REGISTREREN</a>
+          <a href="#prices" style="background: var(--ca-yellow); border: 2px solid white; padding: 15px 30px; text-decoration: none;">PRIJZEN LIJST</a>
+          <a href="#info" style="background: var(--ca-olive); color: white; padding: 15px 30px; text-decoration: none;">MEER INFO</a>
+      </div>
+  </section>
 
-<!-- Registratie Sectie -->
-<section id="registreren" class="register-section">
-    <h2>Registreren</h2>
-    
-    <form class="register-form">
-        <div class="form-group">
-            <input type="text" placeholder="Naam" required>
-        </div>
-        <div class="form-group">
-            <input type="email" placeholder="E-mail" required>
-        </div>
-        <div class="form-group">
-            <input type="tel" placeholder="Telefoonnummer" required>
-        </div>
-        <div class="form-group">
-            <input type="text" placeholder="Aantal tickets">
-        </div>
-        <div class="form-group">
-            <textarea placeholder="Opmerkingen of speciale verzoeken"></textarea>
-        </div>
-        <button type="submit" class="btn btn-tertiary" style="width: 100%;">Verzenden</button>
-    </form>
-</section>
-
-<!-- Prijzen Lijst Sectie -->
-<section id="prijzen" class="prizes-section">
-    <!-- Vogels decoratie -->
-    <div class="birds">
-        <div class="bird"></div>
-        <div class="bird"></div>
-        <div class="bird"></div>
-    </div>
-    
-    <h2>Prijzen Lijst</h2>
-    
-    <div class="prizes-table">
-        <div class="prize-item">
-            <span>EARLY BIRD</span>
-            <span>€ 65</span>
-        </div>
-        <div class="prize-item">
-            <span>WISE OWL</span>
-            <span>€ 75</span>
-        </div>
-        <div class="prize-item">
-            <span>FREE FALCON</span>
-            <span>€ 85</span>
-        </div>
-        <div class="prize-item">
-            <span>LOSSE KAARTEN</span>
-            <span>€ 95</span>
-        </div>
-        <div class="prize-item">
-            <span>HOODIE</span>
-            <span>€ 35</span>
-        </div>
-        <div class="prize-item">
-            <span>T-SHIRT</span>
-            <span>€ 20</span>
-        </div>
-        <div class="prize-item">
-            <span>MOK</span>
-            <span>€ 12</span>
-        </div>
-    </div>
-    
-    <!-- Vallende persoon silhouet -->
-    <svg style="position: absolute; bottom: 10%; right: 10%; width: 120px; height: 180px; opacity: 0.3;">
-        <path d="M60,30 L55,50 L50,80 L45,110 L50,130 L40,150 L45,170 M60,30 L65,50 L70,80 L75,110 L70,130 L80,150 L75,170 M50,60 L40,70 M70,60 L80,70" 
-              stroke="#2C4F6F" stroke-width="8" fill="none" stroke-linecap="round"/>
-        <circle cx="60" cy="20" r="12" fill="#2C4F6F"/>
-    </svg>
-</section>
-
-<!-- Meer Info Sectie -->
-<section id="info" class="info-section">
-    <h2>Meer Info</h2>
-    
-    <div class="info-accordion">
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span>Locatie</span>
-                <span class="accordion-icon">+</span>
-            </div>
-            <div class="accordion-content">
-                <div class="accordion-body">
-                    <p><strong>Adres:</strong> Conferentiecentrum Noordwijkerhout, Langenboom 1, 2211 GE Noordwijkerhout</p>
-                    <p>Het evenement vindt plaats in een prachtig conferentiecentrum nabij de kust. Er zijn voldoende parkeerplaatsen beschikbaar en het centrum is goed bereikbaar met het openbaar vervoer.</p>
-                    <p><strong>Accommodatie:</strong> Er zijn diverse hotels en campings in de buurt beschikbaar. Meer informatie volgt na registratie.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span>Service Doen</span>
-                <span class="accordion-icon">+</span>
-            </div>
-            <div class="accordion-content">
-                <div class="accordion-body">
-                    <p>Wil je een bijdrage leveren aan deze conventie? We zoeken vrijwilligers voor verschillende taken:</p>
-                    <ul style="margin-left: 1.5rem; margin-top: 1rem; line-height: 2;">
-                        <li>Welkomstteam bij de ingang</li>
-                        <li>Technische ondersteuning</li>
-                        <li>Catering assistentie</li>
-                        <li>Workshops begeleiding</li>
-                    </ul>
-                    <p style="margin-top: 1rem;">Neem contact op via het registratieformulier en vermeld dat je wilt helpen!</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span>Public Information</span>
-                <span class="accordion-icon">+</span>
-            </div>
-            <div class="accordion-content">
-                <div class="accordion-body">
-                    <p><strong>Programma overzicht:</strong></p>
-                    <p style="margin-top: 1rem;"><strong>Vrijdag 14 augustus:</strong> Openingsceremonie en welkomstbijeenkomst</p>
-                    <p><strong>Zaterdag 15 augustus:</strong> Workshops, sprekers en avondprogramma</p>
-                    <p><strong>Zondag 16 augustus:</strong> Slotbijeenkomst en evaluatie</p>
-                    <p style="margin-top: 1rem;">Het volledige programma wordt binnenkort bekend gemaakt.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span>Fellow to Fellow Fonds</span>
-                <span class="accordion-icon">+</span>
-            </div>
-            <div class="accordion-content">
-                <div class="accordion-body">
-                    <p>Het Fellow to Fellow Fonds helpt verslaafden die financiële ondersteuning nodig hebben om de conventie bij te wonen. Niemand wordt buitengesloten vanwege financiële redenen.</p>
-                    <p style="margin-top: 1rem;"><strong>Aanvragen:</strong> Neem contact op via het registratieformulier en vermeld je situatie.</p>
-                    <p><strong>Doneren:</strong> Wil je bijdragen aan dit fonds? Dat kan via de donatieoptie bij registratie.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span>Contact Informatie</span>
-                <span class="accordion-icon">+</span>
-            </div>
-            <div class="accordion-content">
-                <div class="accordion-body">
-                    <p><strong>E-mail:</strong> info@caholland2026.nl</p>
-                    <p><strong>Telefoon:</strong> +31 (0)71 123 4567</p>
-                    <p style="margin-top: 1rem;">Voor vragen over registratie, accommodatie of het programma kun je contact met ons opnemen via bovenstaande contactgegevens.</p>
-                    <p style="margin-top: 1rem;"><strong>Social Media:</strong> Volg ons voor updates!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Vrijheid silhouet -->
-    <svg class="freedom-silhouette" style="position: absolute; bottom: 10%; left: 5%; width: 120px; opacity: 0.4;">
-        <path d="M60,20 L55,40 L50,70 L45,100 L50,130 L55,150 M60,20 L65,40 L70,70 L75,100 L70,130 L65,150 M40,50 L30,45 L25,50 M80,50 L90,45 L95,50" 
-              stroke="#FFD700" stroke-width="6" fill="none" stroke-linecap="round"/>
-        <circle cx="60" cy="12" r="10" fill="#FFD700"/>
-        <!-- Kettingen -->
-        <path d="M45,100 L35,110 L30,120 L25,130 M75,100 L85,110 L90,120 L95,130" 
-              stroke="#FFD700" stroke-width="4" fill="none" stroke-dasharray="5,5"/>
-        <!-- Gebroken kettingen -->
-        <path d="M25,130 L20,140 M95,130 L100,140" 
-              stroke="#FFD700" stroke-width="4" fill="none" stroke-linecap="round"/>
-    </svg>
-</section>
-
+  <section id="register" style="background-color: var(--ca-olive-bg); color: white; position: relative; padding: 100px 0; overflow: hidden;">
+      <img src="/images/silhouet-zittend.png" style="position: absolute; left: 0; bottom: 0; height: 90%;" alt="">
+      <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+          <h2>REGISTREREN</h2>
+          </div>
+      <img src="/images/silhouet-springend.png" style="position: absolute; right: 0; top: 10%; height: 80%;" alt="">
+  </section>
 {{ end }}
