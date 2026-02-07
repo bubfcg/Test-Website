@@ -1,1 +1,29 @@
+{{ define "main" }}
+<header style="background: url('/images/header-main.png') no-repeat center bottom; background-size: cover; min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 50px;">
+    <div id="countdown" style="display: flex; gap: 30px; color: #ED6D1A; font-family: 'ADayWithoutSun', sans-serif; font-size: 2.5rem; text-align: center; font-weight: bold;">
+        </div>
+</header>
 
+<script src="/js/countdown.js"></script>
+
+
+  <section style="background-color: var(--ca-yellow); padding: 60px 20px; text-align: center;">
+      <h2 style="color: var(--ca-blue);">AREA C.A. HOLLAND CONVENTIE 2026</h2>
+      <h1 style="font-size: 4rem; color: white; margin: 0;">WE LIVE FREE</h1>
+      <p>14, 15 & 16 AUGUSTUS, NOORDWIJKERHOUT</p>
+      
+      <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px;">
+          <a href="#register" style="background: var(--ca-orange); color: white; padding: 15px 30px; text-decoration: none;">REGISTREREN</a>
+          <a href="#prices" style="background: var(--ca-yellow); border: 2px solid white; padding: 15px 30px; text-decoration: none;">PRIJZEN LIJST</a>
+          <a href="#info" style="background: var(--ca-olive); color: white; padding: 15px 30px; text-decoration: none;">MEER INFO</a>
+      </div>
+  </section>
+
+  <section id="register" style="background-color: var(--ca-olive-bg); color: white; position: relative; padding: 100px 0; overflow: hidden;">
+      <img src="/images/silhouet-zittend.png" style="position: absolute; left: 0; bottom: 0; height: 90%;" alt="">
+      <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+          <h2>REGISTREREN</h2>
+          </div>
+      <img src="/images/silhouet-springend.png" style="position: absolute; right: 0; top: 10%; height: 80%;" alt="">
+  </section>
+{{ end }}
