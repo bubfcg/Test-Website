@@ -1,1 +1,761 @@
+<html lang="nl-nl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Live Free 2026 - Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Oswald:wght@400;700&amp;display=swap" rel="stylesheet">
+    <style>
+/* CSS Variables voor consistent kleurgebruik */
+:root {
+  --primary-yellow: #FFD700;
+  --light-blue: #87CEEB;
+  --orange: #FF6B35;
+  --rust: #C1440E;
+  --olive: #6B7D3C;
+  --dark-blue: #2C4F6F;
+  --white: #FFFFFF;
+  --text-dark: #333333;
+  
+  /* Typography */
+  --font-display: 'Bebas Neue', 'Impact', sans-serif;
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Courier New', 'Courier', monospace;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* Hero Section met Sunburst */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--light-blue);
+  padding: 2rem;
+}
+
+.sunburst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150vmax;
+  height: 150vmax;
+  z-index: 0;
+}
+
+.ray {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  height: 100%;
+  transform-origin: center;
+  clip-path: polygon(50% 0%, 55% 0%, 50% 100%, 45% 100%);
+}
+
+.ray:nth-child(odd) {
+  background: var(--primary-yellow);
+}
+
+.ray:nth-child(even) {
+  background: var(--light-blue);
+}
+
+.ray:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg); }
+.ray:nth-child(2) { transform: translate(-50%, -50%) rotate(30deg); }
+.ray:nth-child(3) { transform: translate(-50%, -50%) rotate(60deg); }
+.ray:nth-child(4) { transform: translate(-50%, -50%) rotate(90deg); }
+.ray:nth-child(5) { transform: translate(-50%, -50%) rotate(120deg); }
+.ray:nth-child(6) { transform: translate(-50%, -50%) rotate(150deg); }
+.ray:nth-child(7) { transform: translate(-50%, -50%) rotate(180deg); }
+.ray:nth-child(8) { transform: translate(-50%, -50%) rotate(210deg); }
+.ray:nth-child(9) { transform: translate(-50%, -50%) rotate(240deg); }
+.ray:nth-child(10) { transform: translate(-50%, -50%) rotate(270deg); }
+.ray:nth-child(11) { transform: translate(-50%, -50%) rotate(300deg); }
+.ray:nth-child(12) { transform: translate(-50%, -50%) rotate(330deg); }
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 900px;
+}
+
+.ca-badge {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rust) 0%, var(--orange) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid var(--white);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.ca-badge-inner {
+  text-align: center;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.ca-badge-inner .top-text {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.ca-badge-inner .ca {
+  font-size: 3.5rem;
+  font-weight: 900;
+  display: block;
+  line-height: 1;
+  margin: 5px 0;
+}
+
+.ca-badge-inner .bottom-text {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  display: block;
+  margin-top: 5px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.countdown-item {
+  text-align: center;
+}
+
+.countdown-number {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--orange);
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+  display: block;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 1rem;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 0.5rem;
+}
+
+.event-subtitle {
+  font-size: 1.2rem;
+  color: var(--orange);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.event-title {
+  font-size: 3.5rem;
+  color: var(--white);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-family: var(--font-display);
+}
+
+.event-date {
+  font-size: 1rem;
+  color: var(--orange);
+  margin-bottom: 2rem;
+}
+
+.event-description {
+  color: var(--rust);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 0.95rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: var(--rust);
+  color: var(--white);
+}
+
+.btn-tertiary {
+  background: var(--olive);
+  color: var(--white);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.register-section {
+  background: linear-gradient(180deg, var(--primary-yellow) 0%, #E6BE00 100%);
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  letter-spacing: 3px;
+}
+
+.register-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1rem;
+  border: none;
+  background: rgba(107, 125, 60, 0.6);
+  color: var(--white);
+  font-family: 'Courier New', monospace;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.prizes-section {
+  background: var(--olive);
+  padding: 4rem 2rem;
+  position: relative;
+  color: var(--white);
+}
+
+.prizes-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  letter-spacing: 3px;
+}
+
+.prizes-table {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.prize-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border: 3px solid var(--white);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.prize-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(10px);
+}
+
+.birds {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  opacity: 0.3;
+}
+
+.bird {
+  width: 40px;
+  height: 20px;
+  background: var(--dark-blue);
+  clip-path: polygon(50% 0%, 0% 100%, 35% 50%, 65% 50%, 100% 100%);
+  margin: 20px;
+  animation: fly 4s ease-in-out infinite;
+}
+
+@keyframes fly {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.bird:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.bird:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.info-section {
+  background: linear-gradient(180deg, var(--olive) 0%, var(--dark-blue) 100%);
+  padding: 4rem 2rem;
+  color: var(--white);
+}
+
+.info-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  letter-spacing: 3px;
+}
+
+.info-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  margin-bottom: 1rem;
+  border: 3px solid var(--white);
+  overflow: hidden;
+}
+
+.accordion-header {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.accordion-content.active {
+  max-height: 500px;
+}
+
+.accordion-body {
+  padding: 1.5rem;
+  line-height: 1.8;
+}
+
+.accordion-body ul {
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  line-height: 2;
+}
+
+footer {
+  background: var(--text-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .event-title {
+    font-size: 2.5rem;
+  }
+  
+  .countdown-number {
+    font-size: 3rem;
+  }
+  
+  .countdown {
+    gap: 1rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .prize-item {
+    font-size: 1rem;
+  }
+}
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="sunburst" style="transform: translate(-50%, -50%) rotate(256.3deg);">
+            <div class="ray"></div>
+            <div class="ray"></div>
+            <div class="ray"></div>
+            <div class="ray"></div>
+            <div class="ray"></div>
+            <div class="ray"></div>
+            <div class="ray"></div>
+            <div class="ray"></div>
+            <div class="ray"></div>
+            <div class="ray"></div>
+            <div class="ray"></div>
+            <div class="ray"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="ca-badge">
+                <div class="ca-badge-inner">
+                    <span class="top-text">HOOP VERTROUWEN</span>
+                    <span class="ca">CA</span>
+                    <span class="bottom-text">MOED</span>
+                </div>
+            </div>
+            
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">186</span>
+                    <span class="countdown-label">DAGEN</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">23</span>
+                    <span class="countdown-label">UREN</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">50</span>
+                    <span class="countdown-label">MIN.</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">SEC</span>
+                </div>
+            </div>
+            
+            <p class="event-subtitle">AREA C.A. HOLLAND CONVENTIE 2026</p>
+            <h1 class="event-title">WE LIVE FREE</h1>
+            <p class="event-date">14, 15 &amp; 16 AUGUSTUS, NOORDWIJKERHOUT</p>
+            
+            <p class="event-description">
+                Het is zo ver. De kaart verkoop van het grootste Nederlandse C.A. event is gestart! 
+                Wij verwelkomen iedereen om deze zomer samen onze nieuwe vrijheid in het leven 
+                te vieren en hun ervaring, kracht en hoop te delen over hoe we tot dit punt gekomen zijn. 
+                Het wordt een groot succes, dus wees er snel bij!
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="#registreren" class="btn btn-primary">Registreren</a>
+                <a href="#prijzen" class="btn btn-secondary">Prijzen Lijst</a>
+                <a href="#info" class="btn btn-tertiary">Meer Info</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registratie Sectie -->
+    <section id="registreren" class="register-section">
+        <h2>Registreren</h2>
+        
+        <form class="register-form">
+            <div class="form-group">
+                <input type="text" placeholder="Naam" required="">
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="E-mail" required="">
+            </div>
+            <div class="form-group">
+                <input type="tel" placeholder="Telefoonnummer" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Aantal tickets">
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Opmerkingen of speciale verzoeken"></textarea>
+            </div>
+            <button type="submit" class="btn btn-tertiary" style="width: 100%;">Verzenden</button>
+        </form>
+    </section>
+
+    <!-- Prijzen Lijst -->
+    <section id="prijzen" class="prizes-section">
+        <div class="birds">
+            <div class="bird"></div>
+            <div class="bird"></div>
+            <div class="bird"></div>
+        </div>
+        
+        <h2>Prijzen Lijst</h2>
+        
+        <div class="prizes-table">
+            <div class="prize-item">
+                <span>EARLY BIRD</span>
+                <span>€ 65</span>
+            </div>
+            <div class="prize-item">
+                <span>WISE OWL</span>
+                <span>€ 75</span>
+            </div>
+            <div class="prize-item">
+                <span>FREE FALCON</span>
+                <span>€ 85</span>
+            </div>
+            <div class="prize-item">
+                <span>LOSSE KAARTEN</span>
+                <span>€ 95</span>
+            </div>
+            <div class="prize-item">
+                <span>HOODIE</span>
+                <span>€ 35</span>
+            </div>
+            <div class="prize-item">
+                <span>T-SHIRT</span>
+                <span>€ 20</span>
+            </div>
+            <div class="prize-item">
+                <span>MOK</span>
+                <span>€ 12</span>
+            </div>
+        </div>
+        
+        <svg style="position: absolute; bottom: 10%; right: 10%; width: 120px; height: 180px; opacity: 0.3;">
+            <path d="M60,30 L55,50 L50,80 L45,110 L50,130 L40,150 L45,170 M60,30 L65,50 L70,80 L75,110 L70,130 L80,150 L75,170 M50,60 L40,70 M70,60 L80,70" stroke="#2C4F6F" stroke-width="8" fill="none" stroke-linecap="round"></path>
+            <circle cx="60" cy="20" r="12" fill="#2C4F6F"></circle>
+        </svg>
+    </section>
+
+    <!-- Meer Info -->
+    <section id="info" class="info-section">
+        <h2>Meer Info</h2>
+        
+        <div class="info-accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Locatie</span>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p><strong>Adres:</strong> Conferentiecentrum Noordwijkerhout, Langenboom 1, 2211 GE Noordwijkerhout</p>
+                        <p>Het evenement vindt plaats in een prachtig conferentiecentrum nabij de kust.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Service Doen</span>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p>Wil je een bijdrage leveren aan deze conventie? We zoeken vrijwilligers!</p>
+                        <ul>
+                            <li>Welkomstteam</li>
+                            <li>Technische ondersteuning</li>
+                            <li>Catering assistentie</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span>Contact Informatie</span>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p><strong>E-mail:</strong> info@caholland2026.nl</p>
+                        <p><strong>Telefoon:</strong> +31 (0)71 123 4567</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <svg style="position: absolute; bottom: 10%; left: 5%; width: 120px; opacity: 0.4;">
+            <path d="M60,20 L55,40 L50,70 L45,100 L50,130 L55,150 M60,20 L65,40 L70,70 L75,100 L70,130 L65,150 M40,50 L30,45 L25,50 M80,50 L90,45 L95,50" stroke="#FFD700" stroke-width="6" fill="none" stroke-linecap="round"></path>
+            <circle cx="60" cy="12" r="10" fill="#FFD700"></circle>
+            <path d="M45,100 L35,110 L30,120 L25,130 M75,100 L85,110 L90,120 L95,130" stroke="#FFD700" stroke-width="4" fill="none" stroke-dasharray="5,5"></path>
+            <path d="M25,130 L20,140 M95,130 L100,140" stroke="#FFD700" stroke-width="4" fill="none" stroke-linecap="round"></path>
+        </svg>
+    </section>
+
+    <footer>
+        <p>© 2026 Area C.A. Holland Conventie. We verwelkomen iedereen om deze zomer samen onze nieuwe vrijheid te vieren.</p>
+        <p><small>In de geest van de 6e Stap van de 12 Stappen.</small></p>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const targetDate = new Date('2026-08-14T00:00:00').getTime();
+            
+            function update() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+                
+                if (distance < 0) {
+                    document.querySelector('.countdown').innerHTML = '<div class="countdown-item"><span class="countdown-number">00</span><span class="countdown-label">EVENT GESTART!</span></div>';
+                    return;
+                }
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }
+            
+            update();
+            setInterval(update, 1000);
+        }
+
+        // Accordion
+        function initAccordion() {
+            const headers = document.querySelectorAll('.accordion-header');
+            
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('.accordion-icon');
+                    
+                    content.classList.toggle('active');
+                    
+                    if (content.classList.contains('active')) {
+                        icon.textContent = '−';
+                    } else {
+                        icon.textContent = '+';
+                    }
+                });
+            });
+        }
+
+        // Smooth scroll
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Form
+        function initFormValidation() {
+            const form = document.querySelector('.register-form');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert('Bedankt voor je registratie! We nemen contact met je op.');
+                    form.reset();
+                });
+            }
+        }
+
+        // Parallax
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const sunburst = document.querySelector('.sunburst');
+            if (sunburst) {
+                sunburst.style.transform = `translate(-50%, -50%) rotate(${scrolled * 0.1}deg)`;
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCountdown();
+            initAccordion();
+            initSmoothScroll();
+            initFormValidation();
+        });
+    </script>
+
+
+</body></html>
