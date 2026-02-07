@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div style="background: linear-gradient(180deg, var(--primary-yellow) 0%, var(--light-blue) 100%); min-height: 100vh; padding: 4rem 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h1 style="font-size: 3rem; color: var(--rust); text-align: center; margin-bottom: 3rem; text-transform: uppercase; letter-spacing: 4px; text-shadow: 3px 3px 0px rgba(0,0,0,0.1);">{{ .Title }}</h1>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;">
+            {{ range .Pages }}
+            <article style="background: white; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease;">
+                <h2 style="font-size: 1.8rem; color: var(--orange); margin-bottom: 1rem;">
+                    <a href="{{ .Permalink }}" style="text-decoration: none; color: inherit;">{{ .Title }}</a>
+                </h2>
+                <p style="color: var(--olive); margin-bottom: 1rem; font-size: 0.9rem;">
+                    {{ .Date.Format "2 January 2006" }}
+                </p>
+                <div style="color: var(--text-dark); line-height: 1.6; margin-bottom: 1.5rem;">
+                    {{ .Summary }}
+                </div>
+                <a href="{{ .Permalink }}" class="btn btn-secondary" style="font-size: 0.9rem; padding: 0.75rem 1.5rem; display: inline-block;">Lees meer</a>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+<style>
+    article:hover {
+        transform: translateY(-5px);
+    }
+</style>
+{{ end }}

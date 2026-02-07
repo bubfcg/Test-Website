@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+    {{ block "main" . }}{{ end }}
+    
+    <footer>
+        <p>© 2026 Area C.A. Holland Conventie. We verwelkomen iedereen om deze zomer samen onze nieuwe vrijheid te vieren.</p>
+        <p><small>In de geest van de 6e Stap van de 12 Stappen hebben zich websites gehouden aan het hoogste niveau van fatsoen.</small></p>
+    </footer>
+    
+    <script src="{{ "js/main.js" | relURL }}"></script>
+</body>
+</html>
