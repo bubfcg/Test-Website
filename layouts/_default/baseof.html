@@ -1,20 +1,33 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-    <meta name="description" content="{{ .Site.Params.description }}">
+    
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+
+    <style>
+        /* Extra fallback om te zorgen dat het font altijd geladen wordt */
+        @font-face {
+            font-family: 'ADayWithoutSun';
+            src: url('{{ "fonts/a-day-without-sun.woff2" | relURL }}') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
 </head>
-<body>
-    {{ block "main" . }}{{ end }}
-    
-    <footer>
-        <p>© 2026 Area C.A. Holland Conventie. We verwelkomen iedereen om deze zomer samen onze nieuwe vrijheid te vieren.</p>
-        <p><small>In de geest van de 6e Stap van de 12 Stappen hebben zich websites gehouden aan het hoogste niveau van fatsoen.</small></p>
+<body style="margin: 0; padding: 0; font-family: sans-serif;">
+
+    <main>
+        {{- block "main" . -}}
+            {{- end -}}
+    </main>
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px; font-size: 0.8rem;">
+        <p>&copy; {{ now.Format "2006" }} Area C.A. Holland - We Live Free</p>
     </footer>
-    
-    <script src="{{ "js/main.js" | relURL }}"></script>
+
 </body>
 </html>
