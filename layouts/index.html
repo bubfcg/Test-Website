@@ -1,39 +1,59 @@
 {{ define "main" }}
-<header style="background: url('{{ "images/header-main.PNG" | relURL }}') no-repeat center bottom; background-size: cover; min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 50px;">
-    <div id="countdown" style="display: flex; gap: 20px; color: #ED6D1A; font-family: 'ADayWithoutSun', sans-serif; font-size: 2.5rem; text-align: center; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+
+<header style="background: url('{{ "images/header-main.PNG" | relURL }}') no-repeat center bottom; background-size: cover; min-height: 85vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 50px;">
+    <div id="countdown" style="display: flex; gap: 20px; color: #ED6D1A; font-family: 'ADayWithoutSun', sans-serif; font-size: 3rem; text-align: center; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); background: rgba(255,255,255,0.2); padding: 10px 30px; border-radius: 50px; backdrop-filter: blur(5px);">
         </div>
 </header>
 
 <section style="background-color: #FEEB15; padding: 80px 20px; text-align: center; font-family: 'ADayWithoutSun', sans-serif;">
-    <h2 style="color: #5EBBEC; margin-bottom: 10px;">AREA C.A. HOLLAND CONVENTIE 2026</h2>
-    <h1 style="font-size: 5rem; color: white; margin: 0; line-height: 1;">WE LIVE FREE</h1>
-    <p style="color: #5A5E1A; font-weight: bold; margin-top: 10px;">14, 15 & 16 AUGUSTUS, NOORDWIJKERHOUT</p>
+    <h2 style="color: #5EBBEC; margin-bottom: 10px; letter-spacing: 2px;">AREA C.A. HOLLAND CONVENTIE 2026</h2>
+    <h1 style="font-size: clamp(3rem, 10vw, 6rem); color: white; margin: 0; line-height: 0.9; text-shadow: 2px 2px 0px #ED6D1A;">WE LIVE FREE</h1>
+    <p style="color: #5A5E1A; font-weight: bold; margin-top: 20px; font-size: 1.2rem;">14, 15 & 16 AUGUSTUS, NOORDWIJKERHOUT</p>
     
-    <div style="margin-top: 40px; display: flex; justify-content: center; gap: 15px; font-family: sans-serif;">
-        <a href="#register" style="background: #ED6D1A; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">REGISTREREN</a>
-        <a href="#prices" style="background: #FEEB15; color: #5A5E1A; border: 2px solid #5A5E1A; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">PRIJZEN LIJST</a>
-        <a href="#info" style="background: #8A9127; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">MEER INFO</a>
+    <div style="margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; font-family: sans-serif;">
+        <a href="#register" style="background: #ED6D1A; color: white; padding: 15px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s;">REGISTREREN</a>
+        <a href="#prices" style="background: transparent; color: #5A5E1A; border: 2px solid #5A5E1A; padding: 15px 35px; text-decoration: none; border-radius: 5px; font-weight: bold;">PRIJZEN LIJST</a>
+        <a href="#info" style="background: #8A9127; color: white; padding: 15px 35px; text-decoration: none; border-radius: 5px; font-weight: bold;">MEER INFO</a>
     </div>
 </section>
 
-<section id="register" style="background-color: #8A9127; color: white; position: relative; padding: 100px 20px; min-height: 500px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+<section id="register" style="background-color: #8A9127; color: white; position: relative; padding: 120px 20px; min-height: 600px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
     
-    <img src="{{ "images/silhouet-zittend.PNG" | relURL }}" style="position: absolute; left: 0; bottom: 0; height: 90%; z-index: 1;" alt="">
+    <img src="{{ "images/silhouet-zittend.PNG" | relURL }}" style="position: absolute; left: 0; bottom: 0; height: 85%; z-index: 1; opacity: 0.9;" alt="Silhouet">
     
-    <div style="max-width: 500px; text-align: center; position: relative; z-index: 2; background: rgba(138, 145, 39, 0.8); padding: 30px; border-radius: 15px;">
-        <h2 style="font-family: 'ADayWithoutSun', sans-serif; font-size: 3rem; margin-bottom: 20px;">REGISTREREN</h2>
-        <p>De registratie opent binnenkort. Houd de countdown in de gaten!</p>
+    <div style="max-width: 600px; text-align: center; position: relative; z-index: 2; background: rgba(90, 94, 26, 0.7); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);">
+        <h2 style="font-family: 'ADayWithoutSun', sans-serif; font-size: 3.5rem; margin-bottom: 20px; color: #FEEB15;">REGISTREREN</h2>
+        <p style="font-size: 1.1rem; line-height: 1.6;">De online registratie voor de Area C.A. Holland Conventie 2026 opent binnenkort. Wil je als eerste op de hoogte zijn? Houd dan deze website en de countdown in de gaten.</p>
+        <p style="margin-top: 20px; font-weight: bold; color: #FEEB15;">Minimale registratie waarde: €16,00</p>
     </div>
 
-    <img src="{{ "images/silhouet-springend.PNG" | relURL }}" style="position: absolute; right: 0; top: 10%; height: 80%; z-index: 1;" alt="">
+    <img src="{{ "images/silhouet-springend.PNG" | relURL }}" style="position: absolute; right: 0; top: 10%; height: 80%; z-index: 1; opacity: 0.9;" alt="Silhouet">
 </section>
 
-<section id="prices" style="background-color: #FEEB15; padding: 100px 20px; text-align: center; position: relative;">
-     <div style="max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-        <h2 style="color: #ED6D1A; font-family: 'ADayWithoutSun', sans-serif; font-size: 3rem;">TICKETS & INFO</h2>
-        <p style="color: #5A5E1A;">Binnenkort meer informatie over de ticketprijzen en pakketten.</p>
-     </div>
+<section id="prices" style="background-color: #FEEB15; padding: 100px 20px; text-align: center; position: relative; overflow: hidden;">
+    <div style="max-width: 900px; margin: 0 auto; background: white; padding: 50px; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); position: relative; z-index: 2;">
+        <h2 style="color: #ED6D1A; font-family: 'ADayWithoutSun', sans-serif; font-size: 3.5rem; margin-bottom: 30px;">TICKETS & PAKKETTEN</h2>
+        
+        <table style="width: 100%; border-collapse: collapse; text-align: left; color: #5A5E1A; font-family: sans-serif;">
+            <tr style="border-bottom: 2px solid #FEEB15;">
+                <th style="padding: 15px;">TYPE TICKET</th>
+                <th style="padding: 15px; text-align: right;">PRIJS</th>
+            </tr>
+            <tr>
+                <td style="padding: 15px;">Standaard Registratie</td>
+                <td style="padding: 15px; text-align: right; font-weight: bold;">€ 16,00</td>
+            </tr>
+            <tr style="background: #FFFCE0;">
+                <td style="padding: 15px;">Combi Ticket (Vrijdag + Zaterdag)</td>
+                <td style="padding: 15px; text-align: right; font-weight: bold;">T.B.A.</td>
+            </tr>
+        </table>
+        <p style="margin-top: 30px; font-style: italic;">Gemiddelde orderwaarde op basis van voorgaande jaren: €32,00</p>
+    </div>
+
+    <img src="{{ "images/man-kettingen.PNG" | relURL }}" style="position: absolute; right: -50px; bottom: -50px; height: 300px; opacity: 0.1; z-index: 1;" alt="">
 </section>
 
 <script src="{{ "js/countdown.js" | relURL }}"></script>
+
 {{ end }}
