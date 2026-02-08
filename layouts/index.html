@@ -1,50 +1,76 @@
 {{ define "main" }}
 
-<header style="background: url('{{ "images/header-main.PNG" | relURL }}') no-repeat center center; background-size: cover; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 40px 20px;">
-    <div style="flex-grow: 1;"></div>
-    
-    <div id="countdown" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; color: #ED6D1A; font-family: 'ADayWithoutSun', sans-serif; font-size: clamp(1.5rem, 8vw, 3rem); text-align: center; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); background: rgba(255,255,255,0.4); padding: 15px 20px; border-radius: 20px; backdrop-filter: blur(8px); margin-bottom: 50px; width: 90%; max-width: 600px;">
+<header style="background: url('{{ "images/header-main.PNG" | relURL }}') no-repeat center bottom; background-size: cover; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 80px;">
+    <div id="countdown" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; color: #ED6D1A; font-family: 'ADayWithoutSun', sans-serif; font-size: clamp(1.8rem, 10vw, 3.5rem); text-align: center; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); background: rgba(255,255,255,0.3); padding: 20px 40px; border-radius: 50px; backdrop-filter: blur(10px); width: 85%; max-width: 700px;">
         </div>
 </header>
 
-<section style="background-color: #FEEB15; padding: 60px 20px; text-align: center; font-family: 'ADayWithoutSun', sans-serif;">
-    <h2 style="color: #5EBBEC; font-size: clamp(1rem, 4vw, 1.5rem); margin-bottom: 10px; letter-spacing: 1px;">AREA C.A. HOLLAND CONVENTIE 2026</h2>
-    <h1 style="font-size: clamp(2.5rem, 12vw, 5rem); color: white; margin: 0; line-height: 1; text-shadow: 2px 2px 0px #ED6D1A;">WE LIVE FREE</h1>
-    <p style="color: #5A5E1A; font-weight: bold; margin-top: 15px; font-size: 1.1rem;">14, 15 & 16 AUGUSTUS, NOORDWIJKERHOUT</p>
+<section style="background-color: #FEEB15; padding: 100px 20px; text-align: center; font-family: 'ADayWithoutSun', sans-serif;">
+    <h2 style="color: #5EBBEC; font-size: clamp(1.2rem, 5vw, 2rem); margin-bottom: 10px; letter-spacing: 2px;">AREA C.A. HOLLAND CONVENTIE 2026</h2>
+    <h1 style="font-size: clamp(3.5rem, 15vw, 7rem); color: white; margin: 0; line-height: 0.85; text-shadow: 3px 3px 0px #ED6D1A;">WE LIVE FREE</h1>
+    <p style="color: #5A5E1A; font-weight: bold; margin-top: 25px; font-size: 1.3rem;">14, 15 & 16 AUGUSTUS, NOORDWIJKERHOUT</p>
     
-    <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 15px; font-family: sans-serif;">
-        <a href="#register" style="background: #ED6D1A; color: white; width: 80%; max-width: 250px; padding: 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">REGISTREREN</a>
-        <a href="#prices" style="background: transparent; color: #5A5E1A; border: 2px solid #5A5E1A; width: 80%; max-width: 250px; padding: 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">PRIJZEN LIJST</a>
-        <a href="#info" style="background: #8A9127; color: white; width: 80%; max-width: 250px; padding: 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">MEER INFO</a>
+    <div style="margin-top: 50px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-family: sans-serif;">
+        <a href="#register" style="background: #ED6D1A; color: white; padding: 18px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase;">REGISTREREN</a>
+        <a href="#prices" style="background: transparent; color: #5A5E1A; border: 3px solid #5A5E1A; padding: 18px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase;">PRIJZEN LIJST</a>
     </div>
 </section>
 
-<section id="register" style="background-color: #8A9127; color: white; position: relative; padding: 80px 20px; min-height: 400px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+<section id="register" style="background-color: #8A9127; color: white; position: relative; padding: 120px 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; min-height: 600px;">
+    <img src="{{ "images/silhouet-zittend.PNG" | relURL }}" style="position: absolute; left: 0; bottom: 0; height: clamp(250px, 60vh, 500px); opacity: 0.4; z-index: 1;" alt="">
+    <img src="{{ "images/silhouet-springend.PNG" | relURL }}" style="position: absolute; right: 0; top: 10%; height: clamp(250px, 50vh, 450px); opacity: 0.4; z-index: 1;" alt="">
     
-    <style>
-        @media (max-width: 768px) {
-            .silhouet { display: none; }
-        }
-    </style>
-
-    <img src="{{ "images/silhouet-zittend.PNG" | relURL }}" class="silhouet" style="position: absolute; left: 0; bottom: 0; height: 80%; opacity: 0.5;" alt="">
-    
-    <div style="max-width: 500px; text-align: center; position: relative; z-index: 2; background: rgba(90, 94, 26, 0.9); padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);">
-        <h2 style="font-family: 'ADayWithoutSun', sans-serif; font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 15px; color: #FEEB15;">REGISTREREN</h2>
-        <p>De online registratie voor de Area C.A. Holland Conventie 2026 opent binnenkort.</p>
-        <p style="margin-top: 15px; font-weight: bold; color: #FEEB15;">Minimale waarde: €1600</p>
+    <div style="max-width: 650px; text-align: center; position: relative; z-index: 2; background: rgba(90, 94, 26, 0.85); padding: 50px 30px; border-radius: 25px; border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(5px);">
+        <h2 style="font-family: 'ADayWithoutSun', sans-serif; font-size: clamp(2.5rem, 10vw, 4rem); margin-bottom: 25px; color: #FEEB15;">REGISTREREN</h2>
+        <p style="font-size: 1.2rem; line-height: 1.6;">De online registratie voor de Area C.A. Holland Conventie 2026 opent binnenkort. Wil je als eerste op de hoogte zijn? Houd dan deze website en de countdown in de gaten.</p>
     </div>
-
-    <img src="{{ "images/silhouet-springend.PNG" | relURL }}" class="silhouet" style="position: absolute; right: 0; top: 10%; height: 70%; opacity: 0.5;" alt="">
 </section>
 
-<section id="prices" style="background-color: #FEEB15; padding: 60px 20px; text-align: center;">
-    <div style="max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
-        <h2 style="color: #ED6D1A; font-family: 'ADayWithoutSun', sans-serif; font-size: 2.5rem; margin-bottom: 20px;">TICKETS</h2>
-        <p style="color: #5A5E1A;">Binnenkort meer info over de ticketprijzen (Gemiddeld €3200).</p>
+<section id="prices" style="background-color: #FEEB15; padding: 100px 20px; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto; background: white; padding: 50px 30px; border-radius: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);">
+        <h2 style="color: #ED6D1A; font-family: 'ADayWithoutSun', sans-serif; font-size: clamp(2.2rem, 8vw, 3.5rem); margin-bottom: 40px;">TICKETS & PAKKETTEN</h2>
+        
+        <div style="text-align: left; font-family: sans-serif; color: #5A5E1A;">
+            <div style="display: flex; justify-content: space-between; padding: 20px 10px; border-bottom: 2px solid #FEEB15; font-weight: bold;">
+                <span>STANDAARD REGISTRATIE</span>
+                <span>€ 16,00</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 20px 10px; border-bottom: 2px solid #FEEB15;">
+                <span>COMBI TICKET (VRIJDAG + ZATERDAG)</span>
+                <span>T.B.A.</span>
+            </div>
+        </div>
+        <p style="margin-top: 30px; font-size: 0.9rem; color: #888;">De prijzen zijn inclusief toegang tot alle meetings en workshops.</p>
+    </div>
+</section>
+
+<section id="info" style="background-color: #8A9127; padding: 100px 20px; color: white; text-align: center; position: relative; overflow: hidden;">
+    <img src="{{ "images/man-kettingen.PNG" | relURL }}" style="position: absolute; right: -50px; bottom: -50px; height: 400px; opacity: 0.15; z-index: 1;" alt="">
+
+    <div style="max-width: 1000px; margin: 0 auto; position: relative; z-index: 2;">
+        <h2 style="font-family: 'ADayWithoutSun', sans-serif; font-size: clamp(2.5rem, 10vw, 4rem); color: #FEEB15; margin-bottom: 50px;">PRAKTISCHE INFO</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; text-align: left;">
+            <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px;">
+                <h3 style="font-family: 'ADayWithoutSun', sans-serif; color: #FEEB15; font-size: 1.8rem;">LOCATIE</h3>
+                <p style="font-family: sans-serif; line-height: 1.6;">
+                    <strong>NH Noordwijk Conference Centre Leeuwenhorst</strong><br>
+                    Langelaan 3<br>
+                    2211 XT Noordwijkerhout
+                </p>
+                <a href="https://www.google.com/maps" target="_blank" style="display: inline-block; margin-top: 15px; color: #FEEB15; text-decoration: underline; font-family: sans-serif;">Open in Google Maps</a>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px;">
+                <h3 style="font-family: 'ADayWithoutSun', sans-serif; color: #FEEB15; font-size: 1.8rem;">VRAGEN?</h3>
+                <p style="font-family: sans-serif; line-height: 1.6;">Heb je vragen over de conventie of over je registratie? Neem contact op met de organisatie.</p>
+                <div style="margin-top: 20px;">
+                    <a href="mailto:info@caholland.org" style="background: #ED6D1A; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; font-family: sans-serif;">EMAIL ONS</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <script src="{{ "js/countdown.js" | relURL }}"></script>
-
 {{ end }}
